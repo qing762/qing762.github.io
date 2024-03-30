@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aqil Hensem</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik+Scribble&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        .rubik-scribble-regular {
+            font-family: "Rubik Scribble", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-thin {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-extralight {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-light {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-regular {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-medium {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-semibold {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-bold {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .ibm-plex mono-thin-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .ibm-plex mono-extralight-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .ibm-plex mono-light-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .ibm-plex mono-regular-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .ibm-plex mono-medium-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .ibm-plex mono-semibold-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .ibm-plex mono-bold-italic {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .space-mono-regular {
+            font-family: "Space Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .space-mono-bold {
+            font-family: "Space Mono", monospace;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .space-mono-regular-italic {
+            font-family: "Space Mono", monospace;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .space-mono-bold-italic {
+            font-family: "Space Mono", monospace;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        body {
+            background-color: #26292e;
+            color: #F3E5AB;
+            font-family: Arial, sans-serif;
+            line-height: 1.6em;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #596777;
+            text-align: center;
+            padding: 20px 0;
+            font-family: "Rubik Scribble", system-ui;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .content img {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .text-content {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .content img {
+            flex: 1;
+            max-width: 45%;
+            margin: 20px;
+            border: 2px solid #6c757d;
+        }
+
+        .text-content {
+            font-size: 0.8em;
+            max-height: 500px;
+            overflow-y: auto;
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        .content .text-content h3 {
+            padding: 10px 10px 5px 10px;
+            color: #FFF5EE;
+            text-align: center;
+            font-family: 'IBM Plex Mono', monospace;;
+        }
+
+        .content .text-content p {
+            padding: 5px 10px 10px 10px;
+            text-indent: 50px;
+            color: #F3E5AB;
+            text-align: center;
+        }
+
+        .content .text-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .content .text-content ul li {
+            padding: 2px 0;
+            color: #F3E5AB;
+        }
+
+        #sticker1 {
+            position: absolute;
+            width: 10vh;
+            height: 10vh;
+        }
+
+        #sticker2 {
+            position: absolute;
+            width: 10vh;
+            height: 10vh;
+        }
+
+        #sticker3 {
+            position: absolute;
+            width: 17vh;
+            height: 10vh;
+        }
+
+        #sticker4 {
+            position: absolute;
+            width: 12vh;
+            height: 12vh;
+        }
+
+        #sticker5 {
+            position: absolute;
+            width: 20vh;
+            height: 20vh;
+        }
+
+        #sticker6 {
+            position: absolute;
+            width: 30vh;
+            height: 20vh;
+        }
+
+        #banner1 {
+            position: absolute;
+            top: 60%;
+            left: 55%;
+            width: 40%
+        }
+
+        #banner2 {
+            position: absolute;
+            top: 130%;
+            left: 55%;
+            width: 40%
+        }
+
+        #banner3 {
+            position: absolute;
+            top: 188%;
+            left: 55%;
+            width: 40%
+        }
+
+        #banner4 {
+            position: absolute;
+            top: 350%;
+            left: 55%;
+            width: 40%
+        }
+
+        #banner5 {
+            position: absolute;
+            top: 426%;
+            left: 55%;
+            width: 40%
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .sticker,
+            .banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Aqil Hensem</h1>
+    <img class="sticker" id="sticker1" src="images/AQILkitty2.png" alt="Sticker">
+    <img class="sticker" id="sticker3" src="images/Cinnamoroll2Bbackground-removebg-preview.png" alt="Sticker">
+    <div class="content">
+        <img src="images/AQIL1.jpg">
+        <div class="text-content">
+            <h3>My favourite place:</h3>
+            <p>Honestly, I would love to go vacation to Seven Wonders Of The World. It is because the places are historic and are quite hot travelling places in the Earth. So if you're from different planet, come surf with me into the Seven Wonders Of The World!</p>
+        </div>
+    </div>
+    <img class="banner" id="banner1" src="images/AQILkuromixkitty.gif" alt="Banner">
+    <div class="content">
+        <img src="images/AQIL2.jpg">
+        <div class="text-content">
+            <h3>My dream house:</h3>
+            <p>Honestly, it's not too much right?</p>
+        </div>
+    </div>
+    <img class="banner" id="banner2" src="images/AQILbanner2.png" alt="Banner">
+    <div class="content">
+        <img src="images/AQIL3.jpg">
+        <div class="text-content">
+            <h3>My dream house:</h3>
+            <p>Just kidding, teacher! This is just a picture of my dream house but not like this actually. My dream house is where both of my parents can live together with me forever and ever ❤</p>
+        </div>
+    </div>
+    <img class="banner" id="banner3" src="images/SANRIO.jpg" alt="Banner">
+    <div class="content">
+        <img src="images/AQIL4.jpg">
+        <div class="text-content">
+            <h3>My dream car:</h3>
+            <p>This is my dream car, it's called Hellcat Dodge with engine of Supercharged 6.2L HEMI® V8. It is charged with 717-Horsepower and 656 punt-feet of torque. But most importantly, it can fit both of my parents and i can bring them wherever i wanted to. Love you mom and dad ❤</p>
+        </div>
+    </div>
+    <img class="sticker" id="sticker5" src="images/AQILpekkle.png" alt="Sticker">
+    <img class="sticker" id="sticker6" src="images/AQILpompompurin.png" alt="Sticker">
+    <div class="content">
+        <img src="images/AQIL5.jpg">
+        <div class="text-content">
+            <h3>My favourite dream club:</h3>
+            <p>Manchester United aka The Red Devils. Manchester United is a well-known club to the whole world and was founded in the year 1878 located in Manchester, United Kingdom. Plus, the club have their own stadium called The Theatre Of Dreams which is Old Trafford which have their own history. Even if you ask people who live in the village, they still know what is Manchester United.</p>
+            <h4>Achievements:</h4>
+            <ul>
+                <li>12x FA Cups</li>
+                <li>6x League Cups</li>
+                <li>21x FA Community Shield</li>
+                <li>3x UEFA Champions League</li>
+                <li>1x UEFA Europa League</li>
+                <li>1x UEFA Cup Winner's Cup</li>
+                <li>1x UEFA Super Cup</li>
+                <li>1x The Intercontinental Cup</li>
+                <li>1x FIFA Club World Cup</li>
+            </ul>
+            <p>Most of their best achievements are under one of the greatest coach of all time which is named, Sir Alex Ferguson and Sir Alex Ferguson created a monster. Called, Cristiano Ronaldo. But most importantly, this club has always been my favourite club if one day i can bring my family with me ❤.</p>
+        </div>
+    </div>
+    <img class="banner" id="banner4" src="images/AQILmelody.gif" alt="Banner">
+    <div class="content">
+        <img src="images/AQIL6.jpg">
+        <div class="text-content">
+            <h3>My favourite food:</h3>
+            <p>Lastly, my favourite food called Spring Rolls or in Malaysia famous known for " Popia ". Popia have alot of flavour Curry, Veggie and Carbonara. My favourite one is SpringRoll / Popia Curry but it's more flavorful when I eat it together with my family and cooked by my Mother with handmade. Ahh, Delicious and Delightful. Love you mom ❤</p>
+        </div>
+    </div>
+    <img class="banner" id="banner5" src="images/AQILcursedsanrio.png" alt="Banner">
+    <script>
+        window.onload = function() {
+            // Get all stickers
+            var stickers = document.getElementsByClassName('sticker');
+
+            // Define the positions
+            var positions = [
+                { left: '57%', top: '30%' },
+                { left: '84%', top: '30%' },
+                { left: '52%', top: '249%' },
+                { left: '77%', top: '247%' },
+            ];
+
+            // Loop over all stickers
+            for (var i = 0; i < stickers.length; i++) {
+                var sticker = stickers[i];
+                var x = Math.floor(Math.random() * (window.innerWidth - sticker.offsetWidth));
+                var y = Math.floor(Math.random() * (window.innerHeight - sticker.offsetHeight));
+                sticker.style.left = x + 'px';
+                sticker.style.top = y + 'px';
+
+                // Define the keyframes
+                var keyframes = [
+                    { left: x + 'px', top: y + 'px' }, // starting position
+                    positions[i % positions.length] // ending position
+                ];
+
+                // Define the timing options
+                var timingOptions = {
+                    duration: 2000,
+                    easing: 'ease-in-out',
+                    fill: 'forwards'
+                };
+
+                // Start the animation
+                sticker.animate(keyframes, timingOptions);
+            }
+        }
+    </script>
+</body>
