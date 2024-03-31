@@ -142,6 +142,7 @@
             justify-content: flex-start;
             align-items: center;
             text-align: center;
+            position: relative;
         }
 
         @media screen and (max-width: 768px) {
@@ -208,12 +209,6 @@
             height: 10vh;
         }
 
-        #sticker2 {
-            position: absolute;
-            width: 10vh;
-            height: 10vh;
-        }
-
         #sticker3 {
             position: absolute;
             width: 17vh;
@@ -221,59 +216,45 @@
         }
 
         #sticker4 {
-            position: absolute;
+            position: relative;
             width: 12vh;
             height: 12vh;
         }
 
         #sticker5 {
-            position: absolute;
+            position: relative;
             width: 20vh;
             height: 20vh;
         }
 
         #sticker6 {
-            position: absolute;
+            position: relative;
             width: 30vh;
             height: 20vh;
         }
 
         #banner1 {
-            position: absolute;
-            top: 60%;
+            position: relative;
+            top: 70%;
             left: 55%;
             width: 40%
         }
 
         #banner2 {
-            position: absolute;
+            position: relative;
             top: 130%;
             left: 55%;
             width: 40%
         }
 
         #banner3 {
-            position: absolute;
+            position: relative;
             top: 188%;
             left: 55%;
             width: 40%
         }
 
-        #banner4 {
-            position: absolute;
-            top: 350%;
-            left: 55%;
-            width: 40%
-        }
-
-        #banner5 {
-            position: absolute;
-            top: 426%;
-            left: 55%;
-            width: 40%
-        }
-
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 768px) {
             .sticker,
             .banner {
                 display: none;
@@ -283,8 +264,8 @@
 </head>
 <body>
     <h1>Aqil Hensem</h1>
-    <img class="sticker" id="sticker1" src="images/AQILkitty2.png" alt="Sticker">
-    <img class="sticker" id="sticker3" src="images/Cinnamoroll2Bbackground-removebg-preview.png" alt="Sticker">
+    <div class="stickerParent"><img class="sticker" id="sticker1" src="images/AQILkitty2.png" alt="Sticker"></div>
+    <div class="stickerParent"><img class="sticker" id="sticker3" src="images/Cinnamoroll2Bbackground-removebg-preview.png" alt="Sticker"></div>
     <div class="content">
         <img src="images/AQIL1.jpg">
         <div class="text-content">
@@ -338,7 +319,6 @@
             <p>Most of their best achievements are under one of the greatest coach of all time which is named, Sir Alex Ferguson and Sir Alex Ferguson created a monster. Called, Cristiano Ronaldo. But most importantly, this club has always been my favourite club if one day i can bring my family with me ❤.</p>
         </div>
     </div>
-    <img class="banner" id="banner4" src="images/AQILmelody.gif" alt="Banner">
     <div class="content">
         <img src="images/AQIL6.jpg">
         <div class="text-content">
@@ -346,7 +326,6 @@
             <p>Lastly, my favourite food called Spring Rolls or in Malaysia famous known for " Popia ". Popia have alot of flavour Curry, Veggie and Carbonara. My favourite one is SpringRoll / Popia Curry but it's more flavorful when I eat it together with my family and cooked by my Mother with handmade. Ahh, Delicious and Delightful. Love you mom ❤</p>
         </div>
     </div>
-    <img class="banner" id="banner5" src="images/AQILcursedsanrio.png" alt="Banner">
     <script>
         window.onload = function() {
             // Get all stickers
@@ -354,10 +333,10 @@
 
             // Define the positions
             var positions = [
-                { left: '57%', top: '30%' },
+                { left: '58%', top: '30%' },
                 { left: '84%', top: '30%' },
                 { left: '52%', top: '249%' },
-                { left: '77%', top: '247%' },
+                { left: '69%', top: '247%' },
             ];
 
             // Loop over all stickers
